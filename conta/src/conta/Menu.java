@@ -4,32 +4,39 @@ import java.util.Scanner;
 
 public class Menu {
 
-	public static void main(String[] args) {
-int numero,somaPar=0,contImpar=0;
-		
-		Scanner leia = new Scanner(System.in);
-		
-		System.out.println("\nEntre com o numero");
-		numero = leia.nextInt();
-		
-		while(numero != 0) {
-			
-			
-			if(numero % 2 == 0) {
-				somaPar += numero;
-			} else {
-				contImpar++;
-				}
-			System.out.println("\nEntre com um número");
-			numero = leia.nextInt();
-		}	
-		
-		System.out.println("\nSomatório dos números pares foi de:"+somaPar);
-		System.out.println("\nQuantidade de números ímpares foi de:"+contImpar);
-		
-		
-		
+    public static void main(String[] args) {
 
-	}
+        Scanner scanner = new Scanner(System.in);
+        int choice;
 
+        do {
+            System.out.println("Selecione uma opção:");
+            System.out.println("1 - Opção 1");
+            System.out.println("2 - Opção 2");
+            System.out.println("3 - Opção 3");
+            System.out.println("4 - Sair");
+
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Opção 1 selecionada");
+                    break;
+                case 2:
+                    System.out.println("Opção 2 selecionada");
+                    break;
+                case 3:
+                    System.out.println("Opção 3 selecionada");
+                    break;
+                case 4:
+                    System.out.println("Saindo do programa...");
+                    break;
+                default:
+                    System.out.println("Opção inválida");
+                    break;
+            }
+        } while (choice != 4);
+
+        scanner.close();
+    }
 }
